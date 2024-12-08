@@ -1,0 +1,10 @@
+@use "sass:color";
+
+$theme-colors: (
+  "primary": #4A90E2, // Azul principal
+  "secondary": #27496D, // Azul oscuro
+  "light": #D3E6FF, // Fondo claro
+  "info": #A8C5E5,
+  "danger": #ff4f4f
+);
+

@@ -1,0 +1,65 @@
+.blog-container {
+  padding: 1.5rem;
+  background-color: $light;
+
+  .blog-article {
+    max-width: 800px;
+    margin: 0 auto;
+    color: $secondary;
+
+    .blog-heading {
+      background-image: url('../images/pexels-pixabay-60504.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+    }
+
+    .header-image {
+      height: 100%;
+    }
+
+    ul {
+      margin: 1.5rem 0;
+      padding-left: 1.5rem;
+
+      li {
+        margin-bottom: 0.5rem;
+        color: $primary;
+      }
+
+      // Pseudoclase funcional para ul con li:last-child
+      &:has(li:last-child) {
+        border-top: 2px solid $primary;
+        padding-top: 1rem;
+      }
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+
+      // Estilos específicos con pseudoclase funcional
+      &:is(.blog-title, .blog-recomendation) {
+        font-family: 'Times New Roman', serif;
+        font-style: italic;
+      }
+    }
+
+    blockquote {
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background-color: $info;
+      border-left: 4px solid $primary;
+      font-style: italic;
+      color: $secondary;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
