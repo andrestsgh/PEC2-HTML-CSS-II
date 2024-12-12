@@ -1,0 +1,24 @@
+@use "sass:map";
+
+$image-titled-src : '../images/pexels-pixabay-60504.jpg';
+
+.image-titled {
+  background-image: url($image-titled-src);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: map.get($theme-colors, light);
+  padding-bottom: 4rem;
+  border-radius: 10px;
+  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.5);
+
+  &__title {
+    padding: 4rem 1rem;
+  }
+
+  &__author {
+    color: map.get($theme-colors, light);
+    text-decoration: none;
+    font-style: italic;
+  }
+}

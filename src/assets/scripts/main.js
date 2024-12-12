@@ -23,6 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("registration-form");
   const errorAlert = document.getElementById("error-alert");
   const toastContainer = new bootstrap.Toast(document.getElementById("success-toast"));
+  const links = document.querySelectorAll('.navbar-nav .nav-link');
+  const currentPath = window.location.pathname;
+
   if (form){
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -40,5 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-});
+  links.forEach(link => {
+    if ('/'+link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    }
+  });
 
+});

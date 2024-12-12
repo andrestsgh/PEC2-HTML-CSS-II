@@ -10,35 +10,90 @@
   <body>
     <include src="views/header.html"></include>
   
-    <main class="blog-container">
+    <main class="blog">
         <article class="blog-article">
 
-          <div class="blog-heading position-relative my-3">
-            <div class="header-image d-flex justify-content-center align-items-center text-center text-white">
-              <div>
-                <p class="blog-title fs-1">La importancia de la seguridad</p>
-                <a href="#" class="author-name nav-link">by Andrés Terol Sánchez</a>
-              </div>
-            </div>
+          <div class="image-titled text-white">
+            <h1 class="image-titled__title">La importancia de la seguridad</h1>
+            <a href="#" class="image-titled__author">by Andrés Terol Sánchez</a>
+          </div>
+          <p class="blog-article__date">19/12/2023</p>
+
+          <div class="text-image">
+            <p class="blog-article__text">
+              <img src="./assets/images/pexels-pixabay-39584.jpg" alt="" class="blog-article__image text-image__image text-image__image--right text-image__image--w50">
+              En un mundo cada vez más interconectado, la ciberseguridad se ha convertido 
+              en uno de los temas más cruciales para empresas, gobiernos y usuarios individuales. A medida que las 
+              tecnologías evolucionan, las amenazas a la seguridad en línea también se vuelven más sofisticadas. Este 
+              artículo explora la importancia de la ciberseguridad, los riesgos que existen en el ciberespacio, y las 
+              mejores prácticas para protegernos de ellos.
+            </p> 
           </div>
 
-        <p>En un mundo cada vez más interconectado, la ciberseguridad se ha convertido en uno de los temas más cruciales para empresas, gobiernos y usuarios individuales. A medida que las tecnologías evolucionan, las amenazas a la seguridad en línea también se vuelven más sofisticadas. Este artículo explora la importancia de la ciberseguridad, los riesgos que existen en el ciberespacio, y las mejores prácticas para protegernos de ellos.</p>
-        
-        <blockquote>
+          <blockquote class="blog-article__blockquote">
             "La ciberseguridad no es un producto, sino un proceso." - Bruce Schneier
-        </blockquote>
-        <p>La ciberseguridad, en términos simples, es la práctica de proteger sistemas, redes y programas de ataques digitales malintencionados. Estos ataques pueden ser muy variados, desde virus y malware hasta el robo de datos confidenciales o el sabotaje de infraestructuras críticas. La ciberseguridad abarca una serie de estrategias y tecnologías que ayudan a prevenir, detectar y responder a los riesgos digitales, asegurando que la información y las operaciones de una organización o individuo estén protegidas.</p>
-        <p class="blog-recomendation">A lo largo de los años, hemos visto un aumento en los ataques informáticos. Desde ransomware hasta phishing, los riesgos son cada vez más sofisticados. Es por ello que recomendamos los siguientes consejos:</p>
-                
-        <ul>
-            <li>Consejo 1: Utiliza contraseñas fuertes y únicas.</li>
-            <li>Consejo 2: Mantén tu software actualizado.</li>
-            <li>Consejo 3: Sé cuidadoso con los correos electrónicos sospechosos.</li>
-        </ul>
-        
-        <img src="./assets/images/pexels-pixabay-39584.jpg" alt="Infografía exagerada sobre la seguridad">
-        <p>La ciberseguridad es un componente esencial de la vida digital moderna. A medida que las amenazas se vuelven más complejas, es importante que individuos y organizaciones adopten medidas preventivas para protegerse. Desde el uso de contraseñas seguras hasta la implementación de políticas de seguridad más robustas, cada acción cuenta en la lucha contra los ciberataques. En última instancia, la educación y la conciencia son las mejores armas en la batalla para proteger la información personal y profesional de las amenazas cibernéticas.</p>
-        <p>En estas jornadas, exploraremos cómo proteger mejor nuestros datos y aprenderemos de expertos en la materia.</p>
+          </blockquote>
+
+          <div class="text-image">
+            <p class="blog-article__text">
+              <img src="./assets/images/pexels-pixabay-60504.jpg" alt="" class="blog-article__image text-image__image text-image__image--left text-image__image--w25">
+              La ciberseguridad es un componente esencial de la vida digital moderna. A medida que 
+              las amenazas se vuelven más complejas, es importante que individuos y organizaciones adopten medidas preventivas 
+              para protegerse. Desde el uso de contraseñas seguras hasta la implementación de políticas de seguridad más robustas, 
+              cada acción cuenta en la lucha contra los ciberataques. En última instancia, la educación y la conciencia son las 
+              mejores armas en la batalla para proteger la información personal y profesional de las amenazas cibernéticas.
+            </p> 
+          </div>
+
+          <p class="blog-article__text">A continuación presentamos algunos de nuestros expertos en ciberseguridad:</p>          
+
+          <!-- Esta tabla es para probar el funcionamiento del componente text-image con container queries -->
+          <table class="experts-table">
+            <tr>
+              <td>
+                <div class="text-image">
+                  <p class="blog-article__text blog-expert">
+                    <img src="./assets/images/pexels-hannah-nelson-390257-1065084.jpg" alt="" class="blog-article__image text-image__image text-image__image--left text-image__image--w25">
+                    Empezó en el mundo de la seguridad con tan sólo 15 años. Su pasión son los videojuegos, y actualmente trabaja en el sector de una gran empresa auditando fallos de seguridad en la red de sus productos en el mercado de los videojuegos y las consolas..
+      
+                  </p> 
+                </div>
+              </td>
+              <td>
+                <div class="text-image">
+                  <p class="blog-article__text blog-expert">
+                    <img src="./assets/images/pexels-justin-shaifer-501272-1222271.jpg" alt="" class="blog-article__image text-image__image text-image__image--left text-image__image--w25">
+                    Experta en seguridad. Trabaja desde hace más de 10 años en el sector privado de las telecomunicaciones realizando auditorías de red a medianas y grandes expertas. Su especialidad es el análisis forense tras un robo de datos.
+                  </p> 
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <div class="text-image">
+                  <p class="blog-article__text blog-expert">
+                    <img src="./assets/images/pexels-mastercowley-1300402.jpg" alt="" class="blog-article__image text-image__image text-image__image--left text-image__image--w25">
+                    Empezó en el mundo de la seguridad con tan sólo 15 años. Su pasión son los videojuegos, y actualmente trabaja en el sector de una gran empresa auditando fallos de seguridad en la red de sus productos en el mercado de los videojuegos y las consolas..
+                  </p> 
+                </div>
+              </td>
+            </tr>
+          </table>
+
+          <p class="blog-article__text">A lo largo de los años, hemos visto un aumento en los ataques informáticos. Desde 
+            ransomware hasta phishing, los riesgos son cada vez más sofisticados. Es por ello que recomendamos los siguientes 
+            consejos:</p>
+                  
+          <ul class="blog-article__list">
+              <li class="blog-article__list-item">Consejo 1: Utiliza contraseñas fuertes y únicas.</li>
+              <li class="blog-article__list-item">Consejo 2: Mantén tu software actualizado.</li>
+              <li class="blog-article__list-item">Consejo 3: Sé cuidadoso con los correos electrónicos sospechosos.</li>
+          </ul>
+          
+          <img src="./assets/images/pexels-pixabay-39584.jpg" alt="Infografía exagerada sobre la seguridad" class="blog-article__image">
+
+          <p class="blog-article__text blog-recomendation">En estas jornadas, exploraremos cómo proteger mejor nuestros datos y aprenderemos de 
+            expertos en la materia.</p>
         </article>
     </main>
   

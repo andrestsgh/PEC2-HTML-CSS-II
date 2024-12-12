@@ -1,25 +1,31 @@
-.form-container {
-  max-width: 600px;
-  height: 100dvh;
+@use "sass:map";
+
+.registration {
+  max-width: 800px;
   font-size: 4dvmin;
 
-  h1 {
+  &__title {
     color: color(hwb 240 20% 0%);
   }
 
-  form {
+  &__form {
     background-color: color(display-p3 0 0.5 0.9);
- 
-    label {
+    margin-bottom: 5svmin;
+
+    &-label {
       color: color(display-p3 1 1 1); 
+      font-size: 3lvmin;
     }
 
-    input, select {
+    &-input,
+    &-select {
       border: 1px solid color(hwb 210 30% 20%);
+      padding: 1svmin;
     }
 
-    button {
+    &-button {
       width: 100%;
+      padding: 2lvmin;
     }
   }
 }

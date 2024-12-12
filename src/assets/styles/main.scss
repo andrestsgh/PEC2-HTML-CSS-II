@@ -20,14 +20,16 @@
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
-
- @import "../../../node_modules/@fortawesome/fontawesome-free/css/all.css";
-
+ 
 @import "settings/variables";
 @import "generic/reset";
+@import "../../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 @import "bootstrap/scss/bootstrap";
 @import "components/header";
 @import "components/footer";
+@import "components/speaker-card";
+@import "components/image-titled";
+@import "components/text-image";
 @import "layouts/home";
 @import "layouts/blog";
 @import "layouts/inscripcion";

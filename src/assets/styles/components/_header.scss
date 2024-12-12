@@ -1,34 +1,37 @@
 @use "sass:map";
 
-.navbar {
+.header{
+  .navbar {
 
-  .navbar-logo {
-    height: 64px;
-    width: auto;
-  }
-
-  .navbar-nav .nav-item {
-    padding: 5px 10px;
-    border: 1px solid map.get($theme-colors, light);
-  }
-
-  @media (min-width: map.get($grid-breakpoints, lg)) {
     .navbar-logo {
-      height: 96px;
+      height: 64px;
+      width: auto;
     }
+  
     .navbar-nav {
-      margin-left: auto;
-      gap: 5px;
+      .nav-item {
+        border: 1px solid map.get($theme-colors, light);
+        text-transform: uppercase;
+      }
     }
-
-    .navbar-nav .nav-item {
-      border: none;
-      border-left: 1px solid map.get($theme-colors, light);
-      padding-left: 10px;
-    }
-
-    .navbar-nav .nav-item:first-child {
-      border-left: none;
+  
+    @media (min-width: map.get($grid-breakpoints, lg)) {
+      .navbar-logo {
+        height: 96px;
+      }
+      .navbar-nav {
+        margin-left: auto;
+        gap: 5px;
+        .nav-item {
+          border: none;
+          border-left: 1px solid map.get($theme-colors, light);
+          padding-left: 10px;
+          text-transform: capitalize;
+        }
+        .nav-item:first-child {
+          border-left: none;
+        }
+      }
     }
   }
 }

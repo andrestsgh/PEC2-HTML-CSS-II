@@ -1,65 +1,78 @@
-.blog-container {
-  padding: 1.5rem;
-  background-color: $light;
+@use "sass:map";
 
-  .blog-article {
-    max-width: 800px;
+.blog {
+  background-color: map.get($theme-colors, light);
+
+  &-article {
+    max-width: 900px;
     margin: 0 auto;
-    color: $secondary;
+    padding: 10px 40px;
+    color:  map.get($theme-colors, info);
 
-    .blog-heading {
-      background-image: url('../images/pexels-pixabay-60504.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 300px;
-    }
+    &__date {
+      padding: 20px 10px;
+      font-style: italic;
 
-    .header-image {
-      height: 100%;
-    }
-
-    ul {
-      margin: 1.5rem 0;
-      padding-left: 1.5rem;
-
-      li {
-        margin-bottom: 0.5rem;
-        color: $primary;
-      }
-
-      // Pseudoclase funcional para ul con li:last-child
-      &:has(li:last-child) {
-        border-top: 2px solid $primary;
-        padding-top: 1rem;
+      &::before {
+        font-style: normal;
+        content: '\f133';
+        font-family: 'Font Awesome 5 Free', sans-serif;
+        left: 0;
+        color: map.get($theme-colors, primary);
       }
     }
 
-    p {
-      margin-bottom: 1rem;
-      line-height: 1.6;
+    &__text {
+      padding: 10px 0px;
+      text-align: justify;
 
       // Estilos específicos con pseudoclase funcional
-      &:is(.blog-title, .blog-recomendation) {
+      &:is(.blog-expert, .blog-recomendation) {
         font-family: 'Times New Roman', serif;
         font-style: italic;
       }
     }
 
-    blockquote {
-      margin: 1.5rem 0;
-      padding: 1rem;
-      background-color: $info;
-      border-left: 4px solid $primary;
-      font-style: italic;
-      color: $secondary;
-    }
-
-    img {
+    &__image {
       max-width: 100%;
       height: auto;
-      margin: 1.5rem 0;
+      margin: 10px;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+
+    &__list {
+      margin: 2rem 0;
+      padding-left: 2rem;
+
+      &-item {
+        margin-bottom: 0.5rem;
+        color: map.get($theme-colors, primary);
+      }
+
+      // Pseudoclase funcional para ul con li:last-child
+      &:has(li:last-child) {
+        border-top: 2px solid map.get($theme-colors, primary);
+        padding-top: 1rem;
+      }
+    }
+
+    &__blockquote {
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background-color: rgba(map.get($theme-colors, primary), 0.25);
+      border-left: 4px solid map.get($theme-colors, primary);
+      font-style: italic;
+      color: map.get($theme-colors, info);
+    }
+  }
+}
+
+.experts-table {
+  width: 100%;
+  td {
+    border: 1px solid #ddd; 
+    padding: 20px; 
+    width: 50%;
   }
 }

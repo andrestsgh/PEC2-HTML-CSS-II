@@ -1,10 +1,32 @@
 @use "sass:color";
+@use "sass:map";
 
+// Personalización del tema de bootstrap
 $theme-colors: (
   "primary": #4A90E2, // Azul principal
   "secondary": #27496D, // Azul oscuro
-  "light": #D3E6FF, // Fondo claro
-  "info": #A8C5E5,
-  "danger": #ff4f4f
+  "light": #FFFFFF, // Fondo claro
+  "info": #6C757D,
+  "danger": #FF4F4F,
+  "warning": #FFC107
 );
 
+// Personalización del input
+$input-focus-bg: map.get($theme-colors, warning);
+$input-border-color: map.get($theme-colors, secondary);
+$input-font-weight: bold;
+
+// Personalización del select
+$form-select-bg: map.get($theme-colors, secondary);
+$form-select-color: map.get($theme-colors, light);
+$form-select-indicator-color: map.get($theme-colors, light);
+
+// Personalización del Tooltip
+$tooltip-font-size: 3dvmin;
+$tooltip-bg: map.get($theme-colors, warning);
+$tooltip-color: map.get($theme-colors, secondary);
+
+// Personalización del Toast
+$toast-padding-x: auto;
+$toast-font-size: 3dvmin;
+$toast-max-width: 100%;

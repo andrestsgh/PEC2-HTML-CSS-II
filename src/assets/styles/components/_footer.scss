@@ -1,33 +1,20 @@
 @use "sass:map";
 
-footer {
+.footer {
   background-color: map.get($theme-colors, secondary);
 
-  .footer-logo {
-    height: 32px;
-    width: auto;
-  }
-}
-
-@media (min-width: 768px) {
-  footer {
-    flex-direction: column;
-    .footer-logo {
-      height: 64px;
+  &__logo {
+    &--image{
+      height: 32px;
+      width: auto;
     }
   }
-}
 
-@media (min-width: 992px) {
-  footer {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-  }
-
-  .footer-links {
-    display: flex;
-    gap: 1rem;
+  @media (min-width: map.get($grid-breakpoints, md)) {
+    &__logo {
+      &--image{
+        height: 64px;
+      }
+    }
   }
 }
