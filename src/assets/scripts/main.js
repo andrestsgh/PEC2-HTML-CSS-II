@@ -44,10 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   links.forEach(link => {
-    console.log(link.currentPath);
-    if ('/'+link.getAttribute('href') === currentPath || link.currentPath === currentPath) {
+    if ('/'+link.getAttribute('href') === currentPath || link.pathname === currentPath) {
       link.classList.add('active');
     }
   });
-
 });
